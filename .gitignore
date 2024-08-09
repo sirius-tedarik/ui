@@ -28,3 +28,5 @@ docs/.vitepress/cache
 *.njsproj
 *.sln
 *.sw?
+
+*storybook.log
