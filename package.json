@@ -1,11 +1,10 @@
 {
   "name": "siri-ui",
-  "author": "Your name <yourmail@mail.com> (https://github.com/[USERNAME])",
-  "version": "0.0.0",
-  "license": "MIT",
-  "description": "Your package description",
-  "private": false,
   "type": "module",
+  "version": "0.0.0",
+  "private": false,
+  "description": "Your package description",
+  "author": "Your name <yourmail@mail.com> (https://github.com/[USERNAME])",
   "contributors": [
     {
       "name": "Asil",
@@ -16,6 +15,15 @@
       "email": "fatih.yildiz@siriusgrup.com"
     }
   ],
+  "license": "MIT",
+  "homepage": "https://sirius-tedarik.github.io/ui/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sirius-tedarik/ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sirius-tedarik/ui/issues"
+  },
   "keywords": [
     "ui",
     "sirius",
@@ -24,28 +32,20 @@
     "storybook",
     "headless"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/sirius-tedarik/ui.git"
-  },
-  "homepage": "https://sirius-tedarik.github.io/ui/",
-  "bugs": {
-    "url": "https://github.com/sirius-tedarik/ui/issues"
-  },
-  "files": [
-    "dist"
-  ],
-  "main": "./dist/siri-ui.umd.cjs",
-  "module": "./dist/siri-ui.js",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "import": "./dist/siri-ui.js",
-      "require": "./dist/siri-ui.umd.cjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/siri-ui.umd.cjs"
     },
     "./style.css": "./dist/style.css"
   },
+  "main": "./dist/siri-ui.umd.cjs",
+  "module": "./dist/siri-ui.js",
   "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "npm run test && vite build --mode production && npm run generate:types && npm run build:pages",
