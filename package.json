@@ -8,14 +8,21 @@
   "type": "module",
   "contributors": [
     {
-      "name": "Your name",
-      "email": "yourmail@mail.com"
+      "name": "Asil",
+      "email": "asil.kilic@siriusgrup.com"
+    },
+    {
+      "name": "Fatih",
+      "email": "fatih.yildiz@siriusgrup.com"
     }
   ],
   "keywords": [
-    "some",
-    "keywords",
-    "here"
+    "ui",
+    "sirius",
+    "vue3",
+    "vite",
+    "storybook",
+    "headless"
   ],
   "repository": {
     "type": "git",
