@@ -14,7 +14,7 @@
    <!-- DESCRIPTION -->
   <p align="center">
     An all-in-one solution for crafting Vue3-based NPM packages with Vite, complete with built-in GitHub Pages live-demo deployment, automated test-and-build workflows, and Vite-powered unit test configuration, including coverage analysis and a README.md template for your package.
-    <br />        
+    <br />
     <br />
     <!-- CHANGER IT WITH YOUR GITHUB PAGES LINK -->
     <a href="https://kaandesu.github.io/vue3-vite-npm-template/#/">Live Demo</a>
@@ -28,7 +28,7 @@
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
-  <ol>    
+  <ol>
     <li><a href="#project-setup">Project Setup</a></li>
     <li><a href="#repository-and-automation-setup">Repository and Automation Setup</a></li>
     <li><a href="#publishing-to-npm">Publishing to NPM</a></li>
@@ -36,7 +36,7 @@
     <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>    
+    <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
