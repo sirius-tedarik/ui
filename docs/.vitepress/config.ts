@@ -5,7 +5,7 @@ export default defineConfig({
   title: 'Vue3 vite NPM template',
   description: 'Vitepress documentation example for vue3-vite-npm-template repository',
   lang: 'en-US',
-  base: '/vue3-vite-npm-template/',
+  base: '/docs',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.webp',
