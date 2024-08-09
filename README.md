@@ -49,7 +49,7 @@
 
 1. **_Package Name Setup:_** Change the package name (every occurrence) in `package.json` and `vite.config.ts` files.
 
-2. **_Write your plugin:_** Start writing your plugin in the `src/myPackagePlugin` folder. As a default, entry will be from its `index.ts` file. You may change the folder name and/or the entry file name, but don't forget to update the `vite.config.ts` file accordingly.
+2. **_Write your plugin:_** Start writing your plugin in the `src/siriUI` folder. As a default, entry will be from its `index.ts` file. You may change the folder name and/or the entry file name, but don't forget to update the `vite.config.ts` file accordingly.
 
 3. **_ChangesetBot_**: Add Changeset Bot and configure. (See [Changeset Bot](https://github.com/apps/changeset-bot) for details)
 
@@ -141,6 +141,6 @@ Distributed under the MIT License. See [LICENSE](LICENSE.md) for more informatio
 
 > For user to edit this section:
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Your Name - [@your_twitter](https://twitter.com/your_username) - <email@example.com>
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)

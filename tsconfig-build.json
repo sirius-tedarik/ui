@@ -9,14 +9,28 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "lib": ["ESNext", "DOM"],
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
     "skipLibCheck": true,
-    "types": ["node"],
+    "types": [
+      "node"
+    ],
     "baseUrl": "./",
     "paths": {
-      "~/*": ["src/myPackagePlugin/*"]
+      "~/*": [
+        "src/siriUI/*"
+      ]
     }
   },
-  "include": ["src/myPackagePlugin/*.ts", "src/myPackagePlugin/*.d.ts"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src/siriUI/*.ts",
+    "src/siriUI/*.d.ts"
+  ],
+  "references": [
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
 }
