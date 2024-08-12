@@ -47,9 +47,11 @@
     "dist"
   ],
   "scripts": {
-    "dev": "vite",
+    "dev": "concurrently \"npm run dev:css\" \"vite\"",
+    "dev:css": "tailwindcss -i ./src/siriUI/styles/main.css -o src/siriUI/style.css --watch",
     "build": "npm run test && vite build --mode production && npm run generate:types && npm run build:pages",
     "build:lib": "npm run test && vite build --mode production && npm run generate:types",
+    "build:css": "tailwindcss -i ./src/siriUI/styles/main.css -o src/siriUI/style.css -m",
     "clean": "rm -rf ./dist && rm -rf ./live-demo && rm -rf ./coverage",
     "coverage:web": "http-server ./coverage",
     "generate:types": "vue-tsc -p tsconfig-build.json --declaration --emitDeclarationOnly true --outdir ./dist",
@@ -67,6 +69,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-vue": "^4.5.0",
+    "concurrently": "^8.2.2",
     "vue": "^3.3.8"
   },
   "devDependencies": {
@@ -86,6 +89,7 @@
     "eslint": "9.5.0",
     "eslint-plugin-storybook": "^0.8.0",
     "storybook": "^8.2.8",
+    "tailwindcss": "^3.4.9",
     "typescript": "^5.2.2",
     "vite": "^5.0.0",
     "vitepress": "^1.0.0-rc.24",

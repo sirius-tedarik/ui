@@ -1,13 +1,14 @@
 import './style.css'
-import type { App } from 'vue'
+import type { App, ComponentOptions } from 'vue'
 import * as components from './components'
 
-const createPlugin = (options?: any): any => {
+function createPlugin(options?: any): any {
   return (app: App) => {
+    // eslint-disable-next-line no-console
     console.log('installing the plugin with the options(?):', options)
     // globally register directives / components / properties here
     for (const key in components) {
-      app.component(key, components[key as keyof typeof components])
+      app.component(key, components[key as keyof typeof components] as unknown as ComponentOptions)
     }
   }
 }

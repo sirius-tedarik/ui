@@ -27,7 +27,6 @@ export default defineConfig(({ mode }) => {
       plugins: [vue()],
       test: {
         globals: true,
-        setupFiles: 'src/setupTests.ts',
         includeSource: ['src/**/*.spec.ts', 'src/**/*.test.ts'],
       },
       resolve: {
@@ -38,8 +37,8 @@ export default defineConfig(({ mode }) => {
       build: {
         lib: {
           entry: resolve(__dirname, 'src/siriUI/index.ts'),
-          name: 'Vue3ViteNpmTemplate',
-          fileName: 'vue3-vite-npm-template',
+          name: 'SiriUI',
+          fileName: 'siri-ui',
         },
         rollupOptions: {
           external: ['vue'],

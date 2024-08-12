@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import playground from './playground.vue'
+import './siriUI/style.css'
 
-createApp(App).mount('#app')
+createApp(playground).mount('#app')
