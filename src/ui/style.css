@@ -1,22 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-button {
-  border: none;
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
   margin: 0;
   padding: 0;
-  width: auto;
-  overflow: visible;
-  background: transparent;
-  /* inherit font & color from ancestor */
-  color: inherit;
+  border: 0;
+  font-size: 100%;
   font: inherit;
-  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
-  line-height: normal;
-  /* Corrects font smoothing for webkit */
-  -webkit-font-smoothing: inherit;
-  -moz-osx-font-smoothing: inherit;
-  /* Corrects inability to style clickable `input` types in iOS */
-  -webkit-appearance: none;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* components */
+
+button {
+  border-style:solid;
 }
 
 .sir-button{
@@ -99,6 +142,9 @@ button {
     line-height: 1.25rem;
   }
   &.primary{
+    border-style: none;
+  }
+  &.primary{
     background-color: rgba(var(--primary), 1);
   }
   &.primary{
@@ -117,11 +163,13 @@ button {
     --tw-ring-color: rgba(var(--ion-color-primary-rgb),0.2);
   }
   &.secondary{
-    border-width: 2px;
+    border-width: 1px;
   }
   &.secondary{
-    --tw-border-opacity: 1;
-    border-color: rgb(161 161 170 / var(--tw-border-opacity));
+    border-color: rgba(var(--primary), 1);
+  }
+  &.secondary{
+    background-image: none;
   }
   &.secondary{
     background-image: none;
@@ -144,17 +192,12 @@ button {
     }
   }
   &.constract{
-    border-width: 1px !important;
-  }
-  &.constract{
-    border-style: solid !important;
-  }
-  &.constract{
-    border-color: rgb(0 0 0 / 0.1) !important;
+    --tw-bg-opacity: 1 !important;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity)) !important;
   }
   &.constract{
     --tw-text-opacity: 1 !important;
-    color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
+    color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
   }
   &.constract{
     --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;

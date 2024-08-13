@@ -96,11 +96,11 @@
     "postcss-nesting": "^13.0.0",
     "storybook": "^v8.2.9",
     "tailwindcss": "^3.4.9",
-    "typescript": "^5.2.2",
+    "typescript": "^5.5.4",
     "vite": "^5.0.0",
     "vitepress": "^1.0.0-rc.24",
     "vitest": "^0.34.6",
-    "vue-tsc": "^1.8.22"
+    "vue-tsc": "^2.0.29"
   },
   "eslintConfig": {
     "extends": [
