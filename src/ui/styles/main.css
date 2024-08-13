@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "../components/button/style.css";
+
+* {
+    @apply m-0 box-border font-["Poppins",_sans-serif];
+}
+
+:root {
+    --transiton-time: 0.3s;
+    --primary: 0, 168, 240;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+
+::-webkit-scrollbar-track,
+:-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-text-fill-color: black !important;
+    -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/* playground */
+.section {
+    @apply flex flex-col gap-2 p-5
+}

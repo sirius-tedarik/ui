@@ -1,54 +1,54 @@
-import { resolve } from 'node:path'
-import vue from '@vitejs/plugin-vue'
-import { defineConfig } from 'vite'
+import { resolve } from "node:path";
+import vue from "@vitejs/plugin-vue";
+import { defineConfig } from "vite";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => {
-  if (mode === 'live-demo') {
+  if (mode === "live-demo") {
     return {
-      base: './',
+      base: "./",
       plugins: [vue()],
       test: {
         globals: true,
       },
       resolve: {
         alias: {
-          '~': resolve(__dirname, 'src', 'siriUI'),
+          "~": resolve(__dirname, "src", "ui"),
         },
       },
       build: {
         rollupOptions: {
-          input: ['index.html'],
+          input: ["index.html"],
         },
       },
-    }
-  }
-  else {
+    };
+  } else {
     return {
       plugins: [vue()],
       test: {
         globals: true,
-        includeSource: ['src/**/*.spec.ts', 'src/**/*.test.ts'],
+        environment: "jsdom",
+        includeSource: ["src/**/*.spec.ts", "src/**/*.test.ts"],
       },
       resolve: {
         alias: {
-          '~': resolve(__dirname, 'src', 'siriUI'),
+          "~": resolve(__dirname, "src", "ui"),
         },
       },
       build: {
         lib: {
-          entry: resolve(__dirname, 'src/siriUI/index.ts'),
-          name: 'SiriUI',
-          fileName: 'siri-ui',
+          entry: resolve(__dirname, "src/ui/index.ts"),
+          name: "ui",
+          fileName: "siri-ui",
         },
         rollupOptions: {
-          external: ['vue'],
+          external: ["vue"],
           output: {
             globals: {
-              vue: 'Vue',
+              vue: "Vue",
             },
           },
         },
       },
-    }
+    };
   }
-})
+});

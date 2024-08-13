@@ -1,17 +1,59 @@
-import type { Meta } from '@storybook/vue3';
-import { Button } from '../siriUI/components';
+import type { Meta, StoryObj } from '@storybook/vue3';
+import { Button as ButtonComponent } from '../ui/components';
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories
-const meta = {
-  title: 'Example/Button',
-  component: Button,
-  // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
-  tags: ['autodocs'],
-  args: {
-    // primary: false,
-    // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-    // onClick: fn(),
+const meta: Meta<typeof Button> = {
+  title: 'Components',
+  component: ButtonComponent as any,
+  argTypes: {
+    size: {
+      control: 'select',
+      options: ['sm', 'md', 'lg'],
+      description: 'Button size',
+    },
+    autoFocus: {
+      control: 'boolean',
+      description: 'Auto focus the button on mount',
+    },
+    loading: {
+      control: 'boolean',
+      description: 'Show loading spinner',
+    },
+    variant: {
+      control: 'select',
+      options: ['primary', 'secondary', 'constract', 'danger', 'warning', 'success'],
+      description: 'Button variant',
+    },
+    fullWidth: {
+      control: 'boolean',
+      description: 'Make button full width',
+    },
+    disabled: {
+      control: 'boolean',
+      description: 'Make button disabled',
+    },
+    to: {
+      control: 'text',
+      description: 'Router link path',
+    },
   },
-} satisfies Meta<typeof Button>;
+} as any;
 
 export default meta;
+
+export const Button = {
+  render: (args: any) => ({
+    components: { Button: ButtonComponent },
+    setup() {
+      return { args };
+    },
+    template: '<Button v-bind="args">Click Me</Button>',
+  }),
+  args: {
+    variant: 'primary',
+    size: 'md',
+    autoFocus: false,
+    loading: false,
+    fullWidth: false,
+    disabled: false,
+  },
+} as any;

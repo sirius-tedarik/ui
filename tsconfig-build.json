@@ -20,13 +20,13 @@
     "baseUrl": "./",
     "paths": {
       "~/*": [
-        "src/siriUI/*"
+        "src/ui/*"
       ]
     }
   },
   "include": [
-    "src/siriUI/*.ts",
-    "src/siriUI/*.d.ts"
+    "src/ui/*.ts",
+    "src/ui/*.d.ts"
   ],
   "references": [
     {

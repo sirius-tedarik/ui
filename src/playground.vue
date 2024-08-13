@@ -1,9 +1,14 @@
 <script setup lang="ts">
-import { Button } from './siriUI/components'
+import { Button } from './ui/components'
 </script>
 
 <template>
-  <div>
-    <Button>test</Button>
+  <div class="section">
+    <Button>Test</Button>
+    <Button variant="secondary">Test</Button>
+    <Button variant="constract">Test</Button>
+    <Button variant="danger">Test</Button>
+    <Button variant="warning">Test</Button>
+    <Button variant="success">Test</Button>
   </div>
 </template>
