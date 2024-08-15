@@ -9,7 +9,7 @@ lerna-debug.log*
 
 node_modules
 dist
-live-demo
+live
 dist-ssr
 *.local
 

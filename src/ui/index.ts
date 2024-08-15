@@ -1,4 +1,3 @@
-import './style.css'
 import type { App, ComponentOptions } from 'vue'
 import * as components from './components'
 
@@ -12,5 +11,6 @@ function createPlugin(options?: any): any {
     }
   }
 }
+
 export * from './components'
 export { createPlugin }
