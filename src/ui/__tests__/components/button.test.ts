@@ -37,15 +37,6 @@ describe('buttonComponent', () => {
     expect(wrapper.findComponent(Icon).exists()).toBe(true)
   })
 
-  // it('focuses on the button if autoFocus prop is true', async () => {
-  //   const wrapper = mount(Button, {
-  //     props: { autoFocus: true },
-  //   })
-  //   const button = wrapper.find('button')
-  //   await button.trigger('focus')
-  //   expect(document.activeElement).toBe(button.element)
-  // })
-
   it('renders slot content when not loading', () => {
     const wrapper = mount(Button, {
       slots: {

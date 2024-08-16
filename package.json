@@ -68,6 +68,7 @@
 	"dependencies": {
 		"@vitejs/plugin-vue": "^4.5.0",
 		"concurrently": "^8.2.2",
+		"storybook-addon-sass-postcss": "^0.3.1",
 		"vue": "^3.3.8"
 	},
 	"devDependencies": {
