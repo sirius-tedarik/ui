@@ -7,6 +7,7 @@ describe('buttonComponent', () => {
   it('renders correctly with default props', () => {
     const wrapper = mount(Button)
     const button = wrapper.find('button')
+
     expect(button.classes()).toContain('sir-button')
     expect(button.classes()).toContain('md')
     expect(button.classes()).toContain('primary')
@@ -19,6 +20,7 @@ describe('buttonComponent', () => {
       props: { fullWidth: true },
     })
     const button = wrapper.find('button')
+
     expect(button.classes()).toContain('w-full')
   })
 
@@ -27,6 +29,7 @@ describe('buttonComponent', () => {
       props: { disabled: true },
     })
     const button = wrapper.find('button')
+
     expect(button.attributes('disabled')).toBeDefined()
   })
 
@@ -34,6 +37,7 @@ describe('buttonComponent', () => {
     const wrapper = mount(Button, {
       props: { loading: true },
     })
+
     expect(wrapper.findComponent(Icon).exists()).toBe(true)
   })
 
@@ -44,6 +48,7 @@ describe('buttonComponent', () => {
       },
     })
     const slotContent = wrapper.find('span')
+
     expect(slotContent.text()).toBe('Click Me!')
     expect(wrapper.findComponent(Icon).exists()).toBe(false)
   })
