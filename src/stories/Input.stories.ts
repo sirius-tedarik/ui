@@ -1,33 +1,43 @@
-import type { Meta, StoryFn } from '@storybook/vue3'
+import type { Meta, StoryObj } from '@storybook/vue3'
 import { Input as InputComponent } from '../ui/components'
 
-export default {
+const meta: Meta<typeof InputComponent> = {
 	title: 'Components',
 	component: InputComponent,
 	argTypes: {
-		type: { control: 'select', options: ['text', 'email', 'password'] },
-		size: { control: 'select', options: ['sm', 'md', 'lg'] },
-		label: { control: 'text' },
-		icon: { control: 'text' },
-		disabled: { control: 'boolean' },
+		name: { control: 'text', description: 'Name attribute of the input' },
+		type: {
+			control: 'select',
+			options: ['text', 'email', 'password'],
+			description: 'Type of the input field',
+		},
+		size: {
+			control: 'select',
+			options: ['sm', 'md', 'lg'],
+			description: 'Size of the input field',
+		},
+		label: { control: 'text', description: 'Label text for the input field' },
+		icon: { control: 'text', description: 'Icon to display in the input field' },
+		disabled: { control: 'boolean', description: 'Disables the input field' },
+	},
+	args: {
+		name: 'example',
+		type: 'text',
+		size: 'md',
+		label: 'Label',
+		icon: '',
+		disabled: false,
 	},
 } as Meta<typeof InputComponent>
 
-const Template: StoryFn<typeof InputComponent> = args => ({
-	components: { InputComponent },
-	setup() {
-		return { args }
-	},
-	template: '<InputComponent v-bind="args" />',
-})
+export default meta
 
-export const Input = Template.bind({})
-Input.args = {
-	name: 'example',
-	label: 'Your Label',
-	size: 'md',
-	type: 'text',
-	disabled: false,
-	icon: '',
-	error: '',
+export const Input: StoryObj<typeof InputComponent> = {
+	render: args => ({
+		components: { Input: InputComponent },
+		setup() {
+			return { args }
+		},
+		template: '<Input v-bind="args" />',
+	}) as any,
 }
