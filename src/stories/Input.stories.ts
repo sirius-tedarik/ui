@@ -19,6 +19,7 @@ const meta: Meta<typeof InputComponent> = {
 		label: { control: 'text', description: 'Label text for the input field' },
 		icon: { control: 'text', description: 'Icon to display in the input field' },
 		disabled: { control: 'boolean', description: 'Disables the input field' },
+		error: { control: 'text', description: 'Error message to display' },
 	},
 	args: {
 		name: 'example',
@@ -27,6 +28,7 @@ const meta: Meta<typeof InputComponent> = {
 		label: 'Label',
 		icon: '',
 		disabled: false,
+		error: '',
 	},
 } as Meta<typeof InputComponent>
 
