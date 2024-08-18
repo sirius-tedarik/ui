@@ -1,7 +1,7 @@
 import type { DOMWrapper } from '@vue/test-utils'
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import { Toggle } from '../../components'
+import { Toggle } from "../../ui/components"
 
 describe('toggle', () => {
 	it('toggle component works when triggered', async () => {

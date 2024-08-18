@@ -12,7 +12,8 @@ import { Button, Input, Toggle } from './ui/components'
 		<h6>test</h6>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta itaque similique aperiam.</p>
 
-		<Toggle />
-
+		<Toggle size="sm" variant="success" icon="akar-icons:check" />
+		<Toggle size="md" variant="success" icon="akar-icons:check" />
+		<Toggle size="lg" variant="success" icon="akar-icons:check" />
 	</div>
 </template>

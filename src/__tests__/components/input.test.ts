@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { describe, expect, it } from 'vitest'
-import { Input } from '../../components/index'
+import { Input } from "../../ui/components"
 
 describe('input', () => {
 	it('renders the input element', () => {
