@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import { computed, ref } from 'vue'
-
-const { name } = withDefaults(defineProps<Props>(), {
-	type: 'text',
-	size: 'md',
-	disabled: false,
-})
+import { computed, ref, useAttrs } from 'vue'
 
 interface Props {
 	name: string
@@ -18,6 +12,14 @@ interface Props {
 	error?: string
 }
 
+const { name } = withDefaults(defineProps<Props>(), {
+	type: 'text',
+	size: 'md',
+	disabled: false,
+})
+
+const attrs = useAttrs()
+
 const idGenerator = computed(() => `${name}${Math.random().toString(36).substring(2, 11)}`)
 
 const password = ref(false)
@@ -26,13 +28,13 @@ const value = defineModel()
 
 <template>
 	<div class="sir-input" :class="[{ 'opacity-50': disabled, error }, size]">
-		<input :id="idGenerator" v-bind="{ name, disabled }" v-model="value"
-    :class="error && 'border-red-500'"
+		<input :id="idGenerator" v-bind="{ name, disabled, ...attrs }" v-model="value"
+			:class="error && 'border-red-500'"
 			class="input peer peer-focus:text-sm peer-placeholder-shown:text-lg peer-placeholder-shown:px-0 peer-focus:bg-white peer-placeholder-shown:bg-transparent peer-placeholder-shown:m-auto peer-placeholder-shown:translate-y-0"
 			:type="type === 'password' ? (password ? 'text' : 'password') : type" :autocomplete="type" placeholder=""
 		>
 		<label v-if="label" :for="idGenerator"
-    :class="error && 'peer-focus:text-red-500'"
+			:class="error && 'peer-focus:text-red-500'"
 			class="label peer-focus:text-sm peer-focus:opacity-50 peer-focus:text-primary peer-placeholder-shown:text-lg peer-placeholder-shown:px-0 peer-focus:bg-white peer-placeholder-shown:bg-transparent peer-focus:m-0 peer-placeholder-shown:m-auto peer-placeholder-shown:translate-y-2"
 		>{{ label }}</label>
 		<button v-if="type === 'password'" class="action">

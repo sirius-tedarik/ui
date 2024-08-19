@@ -1,5 +1,9 @@
 <script setup lang="ts">
-import { Button, Input, Toggle } from './ui/components'
+import { ref, watch } from 'vue'
+import { Button, Input, PadInput, Toggle } from './ui/components'
+
+const value = ref('')
+
 </script>
 
 <template>
@@ -12,8 +16,13 @@ import { Button, Input, Toggle } from './ui/components'
 		<h6>test</h6>
 		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta itaque similique aperiam.</p>
 
-		<Toggle size="sm" variant="success" icon="akar-icons:check" />
-		<Toggle size="md" variant="success" icon="akar-icons:check" />
-		<Toggle size="lg" variant="success" icon="akar-icons:check" />
+		<Toggle variant="primary" icon="akar-icons:check" />
+		<Toggle variant="secondary" icon="akar-icons:check" />
+		<Toggle variant="constract" icon="akar-icons:check" />
+
+		<div class="max-w-xl px-5">
+			<PadInput @submit="submit" />
+			{{ value.splice }} KWLEFJWELKF
+		</div>
 	</div>
 </template>

@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import { computed, onMounted, onUnmounted, ref, watchEffect } from 'vue'
+
 interface Props {
     name: string
     error?: string
@@ -58,7 +60,7 @@ const handleSubmit = watchEffect(() => {
 onMounted(() => {
     const firstInput = document.querySelector('input') as HTMLInputElement
     // eslint-disable-next-line ts/no-unused-expressions
-    props.autoFocus && firstInput.focus()
+    props.autoFocus && firstInput?.focus()
 })
 
 onUnmounted(() => {
@@ -67,7 +69,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-    <form class="st-padinpt" @submit="handleSubmit()">
+    <form class="siri-padinpt" @submit="handleSubmit()">
         <input v-for="(_, index) in pinDigits" :key="index" v-model="pinDigits[index]" maxlength="1" pattern="[0-9]"
             inputmode="numeric" autocomplete="one-time-code" :placeholder="placeholder"
             @input="handleInput(index, $event.target as HTMLInputElement)" @paste="handlePaste($event)"
@@ -76,11 +78,11 @@ onUnmounted(() => {
 </template>
 
 <style lang="postcss" scoped>
-.st-padinpt {
+.siri-padinpt {
     @apply w-full flex gap-4;
 
     input {
-        @apply !w-12 h-12 rounded-lg flex justify-center items-center text-center bg-zinc-50 dark:bg-zinc-900 flex-auto py-2.5 text-black dark:text-white placeholder:text-black/20 placeholder:dark:text-white/20 focus:outline-none text-xl/6 font-medium focus: !bg-transparent focus:ring-1 focus:ring-[var(--ion-color-primary)] focus:ring-opacity-50;
+        @apply h-12 transition-all px-2 bg-transparent w-full text-gray-600 border-b border-zinc-500 focus:border-primary outline-none select-all;
     }
 
     &.error {
@@ -90,7 +92,4 @@ onUnmounted(() => {
     }
 }
 
-.st-outline {
-    @apply absolute inset-0 -z-10 rounded-full;
-}
 </style>
