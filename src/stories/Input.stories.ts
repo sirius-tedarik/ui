@@ -24,7 +24,7 @@ const meta: Meta<typeof InputComponent> = {
 	args: {
 		name: 'example',
 		type: 'text',
-		size: 'md',
+		size: 'sm',
 		label: 'Label',
 		icon: '',
 		disabled: false,

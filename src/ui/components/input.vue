@@ -14,7 +14,7 @@ interface Props {
 
 const { name } = withDefaults(defineProps<Props>(), {
 	type: 'text',
-	size: 'md',
+	size: 'sm',
 	disabled: false,
 })
 
