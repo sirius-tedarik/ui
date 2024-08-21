@@ -8,7 +8,6 @@ export default defineConfig({
   base: '/docs',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    logo: '/logo.webp',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Examples', link: '/markdown-examples' },

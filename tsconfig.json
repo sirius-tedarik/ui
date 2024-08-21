@@ -1,37 +1,37 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "jsx": "preserve",
-    "lib": [
-      "ESNext",
-      "DOM"
-    ],
-    "useDefineForClassFields": true,
-    "baseUrl": "./",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "paths": {
-      "~/*": [
-        "src/ui/*"
-      ]
-    },
-    "resolveJsonModule": true,
-    "types": [
-      "node",
-      "vitest/globals"
-    ],
-    "strict": true,
-    "esModuleInterop": true,
-    "isolatedModules": true,
-    "skipLibCheck": true
-  },
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ],
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.d.ts"
-  ]
+	"compilerOptions": {
+		"target": "ESNext",
+		"jsx": "preserve",
+		"lib": [
+			"ESNext",
+			"DOM"
+		],
+		"useDefineForClassFields": true,
+		"baseUrl": "./",
+		"module": "ESNext",
+		"moduleResolution": "Node",
+		"paths": {
+			"~/*": [
+				"src/ui/*"
+			]
+		},
+		"resolveJsonModule": true,
+		"types": [
+			"node",
+			"vitest/globals"
+		],
+		"strict": true,
+		"esModuleInterop": true,
+		"isolatedModules": true,
+		"skipLibCheck": true
+	},
+	"references": [
+		{
+			"path": "./tsconfig.node.json"
+		}
+	],
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.d.ts"
+	]
 }

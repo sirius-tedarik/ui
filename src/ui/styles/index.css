@@ -4,6 +4,42 @@
 @tailwind components;
 @tailwind utilities;
 
+@layout components {
+    .badge {
+        @apply ring-1 ring-inset rounded-md inline-flex items-center;
+
+        &.inactive {
+            @apply text-zinc-400 dark:text-zinc-500 ring-zinc-400/30;
+        }
+
+        &.active {
+            &.primary {
+                @apply text-blue-500 bg-blue-500/5 dark:text-blue-400 ring-blue-500 dark:ring-blue-400;
+            }
+
+            &.white {
+                @apply text-white bg-white/20 dark:text-white ring-white/5 ;
+            }
+        }
+
+        &.xs {
+            @apply text-xs px-1.5 py-0.5;
+        }
+
+        &.sm {
+            @apply text-xs px-2 py-1;
+        }
+
+        &.md {
+            @apply text-sm px-2 py-1;
+        }
+
+        &.lg {
+            @apply text-sm px-2.5 py-1.5;
+        }
+    }
+}
+
 * {
     @apply m-0 box-border font-["Poppins",_sans-serif];
 }
@@ -30,27 +66,27 @@ textarea:-webkit-autofill {
     transition: background-color 5000s ease-in-out 0s;
 }
 
-h1 {
+.title1 {
     @apply text-5xl text-primary;
 }
 
-h2 {
+.title2 {
     @apply text-3xl;
 }
 
-h3 {
+.title3 {
     @apply text-2xl;
 }
 
-h4 {
+.title4 {
     @apply text-xl;
 }
 
-h5 {
+.title5 {
     @apply text-lg;
 }
 
-h6 {
+.title6 {
     @apply text-base;
 }
 

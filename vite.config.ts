@@ -37,10 +37,12 @@ export default defineConfig(({ mode }) => {
         },
       },
       build: {
+        cssCodeSplit: false,
         lib: {
           entry: resolve(__dirname, "src/ui/index.ts"),
-          name: "ui",
-          fileName: "siri-ui",
+          formats: ['es', 'umd', 'cjs'],
+          name: 'sirius-ui',
+          fileName: format => `index.${format}.js`,
         },
         rollupOptions: {
           external: ["vue"],

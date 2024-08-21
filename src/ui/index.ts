@@ -12,4 +12,6 @@ function createPlugin(options?: any): any {
 }
 
 export * from './components'
+export * as tailwindcss from '../../tailwind.config'
+
 export { createPlugin }
