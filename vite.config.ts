@@ -45,7 +45,7 @@ export default defineConfig(({ mode }) => {
           fileName: format => `index.${format}.js`,
         },
         rollupOptions: {
-          external: ["vue"],
+          external: ["vue", "vue-router"],
           output: {
             globals: {
               vue: "Vue",

@@ -6,6 +6,7 @@ interface Props {
 	variant?: 'primary' | 'secondary' | 'constract' | 'danger' | 'warning' | 'success'
 	size?: 'sm' | 'md' | 'lg'
 	icon?: string
+	onChange?: (event: Event) => void
 }
 
 withDefaults(defineProps<Props>(), {
@@ -21,12 +22,12 @@ const value = defineModel({
 
 <template>
 	<label class="sir-toggle" :class="[variant, size]" :aria-checked="value">
-		<input :id="idGenerator" v-model="value" type="checkbox" class="peer sr-only">
+		<input :id="idGenerator" v-model="value" type="checkbox" class="peer sr-only" @change="onChange">
 		<label :for="idGenerator" class="hidden" />
 		<div class="toggle peer-checked:bg-current peer-checked:after:left-auto peer-focus:ring-current"
 			:class="[size !== 'sm' ? 'after:left-1 peer-checked:after:right-1' : 'after:left-[0.150rem] left-0.5 peer-checked:after:right-[0.150rem]']"
 		>
-			<Icon :icon="icon" class="icon" :class="value ? '!left-auto !right-[var(--icon-position)]' : '!left-[var(--icon-position)]'" />
+			<Icon :icon="icon || ''" class="icon" :class="value ? '!left-auto !right-[var(--icon-position)]' : '!left-[var(--icon-position)]'" />
 		</div>
 	</label>
 </template>
@@ -118,7 +119,7 @@ const value = defineModel({
     }
 
     .toggle {
-        @apply relative transition rounded-full bg-zinc-200;
+        @apply relative transition-all rounded-full bg-zinc-200;
 
         &::after {
             @apply absolute top-1/2 -translate-y-1/2 rounded-full bg-white transition-all content-[''];

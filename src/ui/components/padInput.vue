@@ -82,7 +82,7 @@ onUnmounted(() => {
     @apply w-full flex gap-4;
 
     input {
-        @apply h-12 transition-all px-2 bg-transparent w-full text-gray-600 border-b border-zinc-500 focus:border-primary outline-none select-all;
+        @apply h-12 transition-all px-2 bg-transparent w-full text-gray-600 border-b-2 border-zinc-500 focus:border-primary outline-none select-all;
     }
 
     &.error {

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { PadInput as PadInputComponent } from '../ui/components'
+import { PadInput as PadInputComponent } from '../../ui/components'
 
 const meta: Meta<typeof PadInputComponent> = {
 	title: 'Components',

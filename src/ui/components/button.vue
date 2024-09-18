@@ -70,7 +70,7 @@ onMounted(() => {
         }
 
         &.secondary {
-            @apply text-primary dark:text-primary/50 bg-none dark:focus:ring-blue-400/20 outline-none border border-primary;
+            @apply text-primary bg-none dark:focus:ring-blue-400/20 outline-none border border-primary;
         }
 
         &.constract {

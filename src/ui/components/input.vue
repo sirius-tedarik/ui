@@ -59,7 +59,7 @@ const value = defineModel()
     }
 
     .label {
-      @apply !text-lg;
+      @apply !text-sm;
     }
   }
 
@@ -81,7 +81,7 @@ const value = defineModel()
 }
 
 .action {
-  @apply absolute right-0 bottom-1 mb-1 text-zinc-500 hover:text-zinc-700 cursor-pointer;
+  @apply absolute right-0 bottom-1 mb-1 text-zinc-400 hover:text-zinc-500 cursor-pointer;
 
   svg {
     @apply h-5 w-5;
@@ -93,7 +93,7 @@ const value = defineModel()
 }
 
 .input {
-  @apply text-lg pb-2 border-0 border-b border-gray-300 p-0 cursor-text focus:outline-none focus:!border-primary transition-all;
+  @apply bg-transparent text-lg pb-2 border-0 border-b border-zinc-400/50 p-0 cursor-text focus:outline-none focus:!border-primary transition-all;
 
   &:focus {
     outline: 0;

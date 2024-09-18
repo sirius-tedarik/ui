@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Toggle as ToggleComponent } from '../ui/components'
+import { Toggle as ToggleComponent } from '../../ui/components'
 
 const meta: Meta<typeof ToggleComponent> = {
 	title: 'Components',

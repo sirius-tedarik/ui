@@ -51,6 +51,7 @@
 		"dev": "vite",
 		"build": "npm run test && vite build --mode production && npm run generate:types && npm run build:pages",
 		"build:lib": "npm run test && vite build --mode production && npm run generate:types",
+		"dev:lib": "npm run test && vite build -w --mode production && npm run generate:types",
 		"clean": "rm -rf ./dist && rm -rf ./live && rm -rf ./coverage",
 		"coverage:web": "http-server ./coverage",
 		"generate:types": "vue-tsc -p tsconfig-build.json --declaration --emitDeclarationOnly true --outdir ./dist",
@@ -75,7 +76,8 @@
 		"@vitejs/plugin-vue": "^4.5.0",
 		"concurrently": "^8.2.2",
 		"storybook-addon-sass-postcss": "^0.3.1",
-		"vue": "^3.3.8"
+		"vue": "^3.3.8",
+		"vue-router": "^4.4.3"
 	},
 	"devDependencies": {
 		"@antfu/eslint-config": "^2.25.0",

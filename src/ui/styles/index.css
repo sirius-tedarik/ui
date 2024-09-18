@@ -67,27 +67,27 @@ textarea:-webkit-autofill {
 }
 
 .title1 {
-    @apply text-5xl text-primary;
+    @apply text-2xl text-primary;
 }
 
 .title2 {
-    @apply text-3xl;
-}
-
-.title3 {
-    @apply text-2xl;
-}
-
-.title4 {
     @apply text-xl;
 }
 
-.title5 {
+.title3 {
     @apply text-lg;
 }
 
-.title6 {
+.title4 {
     @apply text-base;
+}
+
+.title5 {
+    @apply text-sm;
+}
+
+.title6 {
+    @apply text-xs;
 }
 
 p {

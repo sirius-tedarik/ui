@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3'
-import { Input as InputComponent } from '../ui/components'
+import { Input as InputComponent } from '../../ui/components'
 
 const meta: Meta<typeof InputComponent> = {
 	title: 'Components',
